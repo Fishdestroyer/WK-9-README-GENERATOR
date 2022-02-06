@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
+const { fstat } = require('fs');
 const inquirer = require('inquirer');
-const generatePage = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+//const fs = require('fs');
 
 
 const promptUser =() => {
@@ -56,18 +58,44 @@ const promptUser =() => {
             message: 'Enter your GitHub link here'
         }
 
-    ]);
+    ]).then(answers => {
+        return answers;
+    });
 };
 
 // TODO: Create an array of questions for user input
 //const questions = [];
 
 // TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
+const writeFile = (data) => {
+    return new promise((resolve, reject) => {
+        fs.writeFile('./dist/README.md', data, err => {
+            if(err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'You created a README!'
+            });
+        });
+    });
+};
 
 // TODO: Create a function to initialize app
 //function init() {}
 
 // Function call to initialize app
-//init();
-promptUser();
+function init() {
+    promptUser()
+    .then(answers => {
+        return generateMarkdown(answers);
+    })
+    .then(markdown => {
+        return writeFile(markdown)
+    })
+    .catch(err => {
+        console.log(err);
+    });
+};
+promptUser() ;
