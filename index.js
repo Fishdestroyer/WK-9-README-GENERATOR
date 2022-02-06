@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
-const { fstat } = require('fs');
+const fs  = require('fs');
 const inquirer = require('inquirer');
+const promise = require('promise');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 //const fs = require('fs');
 
@@ -40,21 +41,21 @@ const promptUser =() => {
         },
         //License option
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'what license woulde you like to use?',
-            choices: ['MIT','GNU', 'Apache']
+            choices: ['Apache', 'MIT', 'GNU']
         },
         //additional resources and mentions
         {
             type: 'input',
-            name: 'additional resources',
+            name: 'resources',
             message: 'List any additional resources or contributors that assisted in this project.'
         },
         //Github Link
         {
             type: 'input',
-            name: 'link',
+            name: 'github',
             message: 'Enter your GitHub link here'
         }
 
@@ -67,35 +68,17 @@ const promptUser =() => {
 //const questions = [];
 
 // TODO: Create a function to write README file
-const writeFile = (data) => {
-    return new promise((resolve, reject) => {
-        fs.writeFile('./dist/README.md', data, err => {
-            if(err) {
-                reject(err);
-                return;
-            }
-            resolve({
-                ok: true,
-                message: 'You created a README!'
-            });
-        });
-    });
-};
+function writeToFile(projectTitle, data) {
+    fs.appendFile(`${projectTitle}.md`, data, 
+    (err) => err ? console.error(err) : console.log(`${projectTitle}.md has been generated.`))
+}
 
 // TODO: Create a function to initialize app
 //function init() {}
 
 // Function call to initialize app
-function init() {
-    promptUser()
-    .then(answers => {
-        return generateMarkdown(answers);
-    })
-    .then(markdown => {
-        return writeFile(markdown)
-    })
-    .catch(err => {
-        console.log(err);
-    });
-};
-promptUser() ;
+async function init() {
+    let answers = await promptUser();
+    writeToFile((answers.projectTitle),(generateMarkdown(answers)));
+}
+init() ;
