@@ -1,24 +1,28 @@
-# test
+# Another test
 
   ## Badges
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-this is only a test. please do not look I am hideous! Help me
+another test, please disregard
 
   ## Table of contents
-   *[usage](#usage)
-   *[installation](#installation)
-   *[license](#license)
-   *[resources](#resources)
-   *[github](#github)
+   *[Usage](#Usage)
+
+   *[Installation](#installation)
+
+   *[License](#License)
+
+   *[Resources](#resources)
+
+   *[GitHub](#github)
 
   ## Installation
 
-  the kitchen sink
+  nothing
 
   ## Usage
-  it wont be
+  for a grade
 
   ## license
 
@@ -27,12 +31,12 @@ this is only a test. please do not look I am hideous! Help me
 
   ## Additional resources and mentions
 
-  none, I am big brained
+  many
 
 
   ## GitHub link with contact info
 
-  crap
+  hub
 
   
 
