@@ -1,5 +1,7 @@
 const fs = require('fs');
- let licenseOptions = ['Apache', 'MIT', 'GNU'];
+ let licenseOptions = ['Apache', 'MIT', 'GNU'];//Could not get badge and license to display correctly so set to an array and called in the functions
+
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -17,14 +19,14 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) { 
-  if(license === 'Apache') {
-    return '[${license}](https://opensource.org/licenses/Apache-2.0)';
-  }else if (license === 'MIT') {
-    return '[${license}](https://opensource.org/licenses/MIT)';
-  }else if (license === 'GNU') {
-    return '[${license}](https://www.gnu.org/licenses/gpl-3.0)';
+  if(license === licenseOptions[0]) {
+    return '[${license: Apache-2.0}](https://opensource.org/licenses/Apache-2.0)'
+  }else if (license === licenseOptions[1]) {
+    return '[${license: MIT}](https://opensource.org/licenses/MIT)'
+  }else if (license === licenseOptions[2]) {
+    return '[${license: GPL v3}](https://www.gnu.org/licenses/gpl-3.0)'
   }else{
-    return '';
+    return ''
   };
    
 };
@@ -33,13 +35,13 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if(license === 'Apache') {
-    return '${license}(https://opensource.org/licenses/Apache-2.0)';
+    return '${license}(https://opensource.org/licenses/Apache-2.0)'
   }else if (license === 'MIT') {
-    return '${license}(https://opensource.org/licenses/MIT)';
+    return '${license}(https://opensource.org/licenses/MIT)'
   }else if (license === 'GNU') {
-    return '${license}(https://www.gnu.org/licenses/gpl-3.0)';
+    return '${license}(https://www.gnu.org/licenses/gpl-3.0)'
   }else{
-    return "";
+    return ""
   };
    
 };
