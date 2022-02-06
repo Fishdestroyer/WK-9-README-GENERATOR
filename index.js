@@ -21,11 +21,11 @@ const promptUser =() => {
             message: 'Enter a description of your project'
         },
         // Table of contents section
-        {
+       /*{
             type: 'input',
             name: 'table',
             message: 'Please list the table of contents'
-        },
+        },*/
         //Required installation
         {
         type: 'input',
