@@ -1,9 +1,10 @@
 // TODO: Include packages needed for this application
 const fs  = require('fs');
 const inquirer = require('inquirer');
-const promise = require('promise');
+const promise = require('promise');// When npm install was ran and promise was declared, error kept throwing. No matter how/ what I done
+// as you will se from code, changed to an async function. Installed promise and required before I changed to async.
+//starter code was outdated on npm install, had to delete inquirer and install current version. 
 const generateMarkdown = require('./utils/generateMarkdown.js');
-//const fs = require('fs');
 
 
 const promptUser =() => {
@@ -20,12 +21,6 @@ const promptUser =() => {
             name: 'description',
             message: 'Enter a description of your project'
         },
-        // Table of contents section
-       /*{
-            type: 'input',
-            name: 'table',
-            message: 'Please list the table of contents'
-        },*/
         //Required installation
         {
         type: 'input',
