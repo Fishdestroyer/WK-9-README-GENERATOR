@@ -65,7 +65,7 @@ ${data.description}
 
    *[Resources](#resources)
 
-   *[GitHub](#github)
+   *[Questions](#questions)
 
   ## Installation
 
@@ -76,7 +76,8 @@ ${data.description}
 
   ## license
 
-  ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data.license)},
+
   ${renderLicenseLink(data.license)}
 
   ## Additional resources and mentions
@@ -84,12 +85,10 @@ ${data.description}
   ${data.resources}
 
 
-  ## GitHub link with contact info
+  ## Questions
 
-  ${data.github}
-
-  
-
+  [${data.username}](https://github.com/${data.username})  
+  ${data.email}
 `;
 }
 

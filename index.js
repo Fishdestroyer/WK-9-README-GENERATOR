@@ -55,9 +55,15 @@ const promptUser =() => {
         //Github Link
         {
             type: 'input',
-            name: 'github',
+            name: 'questions',
             message: 'Enter your GitHub link here'
-        }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email?'
+
+        },
 
     ]).then(answers => {
         return answers;
