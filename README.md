@@ -37,6 +37,31 @@ WHEN I click on the links in the Table of Contents
 
 THEN I am taken to the corresponding section of the README
 
+# Technologies used
+* Inquirer
+
+* JavaScript
+
+* Promise
+
+# Additonal Research
+* NPM
+
+* Module Content
+
+* Google
+
+* Stackoverflow- in regard to promise 
+
+* stack overflow- in regard to async functions
+
+# Screen Shots
+
+
+# Functionality Video
+
+
+
 # Professional README Generator Starter Code
 [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
