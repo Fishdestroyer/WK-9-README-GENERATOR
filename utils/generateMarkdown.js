@@ -61,7 +61,7 @@ ${data.description}
 
    *[Installation](#installation)
 
-   *[License](#License)
+   *[License](#license)
 
    *[Resources](#resources)
 
