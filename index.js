@@ -6,6 +6,8 @@ const promise = require('promise');// When npm install was ran and promise was d
 //starter code was outdated on npm install, had to delete inquirer and install current version. 
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
+// TODO: Create an array of questions for user input
+//const questions = [];
 
 const promptUser =() => {
     return inquirer.prompt ([
@@ -50,7 +52,7 @@ const promptUser =() => {
         //Github Link
         {
             type: 'input',
-            name: 'questions',
+            name: 'username',
             message: 'Enter your GitHub link here'
         },
         {
@@ -65,8 +67,7 @@ const promptUser =() => {
     });
 };
 
-// TODO: Create an array of questions for user input
-//const questions = [];
+
 
 // TODO: Create a function to write README file
 function writeToFile(projectTitle, data) {
