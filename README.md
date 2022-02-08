@@ -60,7 +60,7 @@ THEN I am taken to the corresponding section of the README
 
 # Functionality Video
 
-
+https://watch.screencastify.com/v/Zc7E3WfCkn9PDWPhCY5f
 
 # Professional README Generator Starter Code
 [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
