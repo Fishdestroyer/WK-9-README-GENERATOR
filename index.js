@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const fs  = require('fs');
+const fs  =  require('fs');
 const inquirer = require('inquirer');
 const promise = require('promise');// When npm install was ran and promise was declared, error kept throwing. No matter how/ what I done
 // as you will se from code, changed to an async function. Installed promise and required before I changed to async.
@@ -68,19 +68,16 @@ const promptUser =() => {
 };
 
 
-
 // TODO: Create a function to write README file
-function writeToFile(projectTitle, data) {
+function writeFile(projectTitle, data) {
     fs.appendFile(`${projectTitle}.md`, data, 
     (err) => err ? console.error(err) : console.log(`${projectTitle}.md has been generated.`))
 }
 
-// TODO: Create a function to initialize app
-//function init() {}
 
 // Function call to initialize app
 async function init() {
     let answers = await promptUser();
-    writeToFile((answers.projectTitle),(generateMarkdown(answers)));
+    writeFile((answers.projectTitle),(generateMarkdown(answers)));
 }
 init() ;
