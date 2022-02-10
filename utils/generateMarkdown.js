@@ -57,7 +57,7 @@ function generateMarkdown(data) {
 ${data.description}
 
   ## Table of contents
-   *[Usage](#Usage)
+   *[Usage](#usage)
 
    *[Installation](#installation)
 
@@ -80,7 +80,7 @@ ${data.description}
 
   ${renderLicenseLink(data.license)}
 
-  ## Additional resources and mentions
+  ## Resources and additional information
 
   ${data.resources}
 

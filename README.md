@@ -60,7 +60,7 @@ No screen shots due to video
 
 # Functionality Video
 
-
+https://drive.google.com/file/d/1pq7HVqf_pyhNiLhrn8mgneY_6KeA-io4/view?usp=sharing
 
 # Professional README Generator Starter Code
 [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
